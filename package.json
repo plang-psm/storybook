@@ -1,6 +1,7 @@
 {
   "name": "openbook",
   "version": "1.0.0",
+  "proxy": "the-open-book-production.up.railway.app",
   "description": "",
   "main": "app.js",
   "scripts": {
