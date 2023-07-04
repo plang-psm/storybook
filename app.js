@@ -65,7 +65,7 @@ app.engine(
   })
 );
 
-app.set('views', path.join(__dirname, 'views'));
+// app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', '.hbs');
 
 // Sessions
@@ -91,7 +91,10 @@ app.use(function (req, res, next) {
 });
 
 // Static folder
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'public')));
+app.get('*', (_, res) => {
+  res.sendFile(path.join(__dirname, './views/login.hbs'));
+});
 
 // Routes
 app.use('/', require('./routes/index'));
