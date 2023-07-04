@@ -6,13 +6,9 @@
 
 <div align='center'>
     <h1>The Open Book</h1>
-    <p> The Open Book is an online journal for users to share their stories. Users can create and manage stories and view publicly shared stories from other users. This application was built with Vanilla JavaScript, Node, Express, MongoDB, Handlesbars, Materialize CSS and Passport.
-    [The Open Book](https://the-open-book-production.up.railway.app/)
-    </p>
+    <p> The Open Book is an online journal for users to share their stories. Users can create and manage stories and view publicly shared stories from other users. This application was built with Vanilla JavaScript, Node, Express, MongoDB, Handlesbars, Materialize CSS and Passport.</p>
         <a href='https://www.linkedin.com/in/plang-psm/' target='_blank'><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn tag" /></a>
 </div>
-
-
 
 ## Table of Contents
 * [Description](#description)
