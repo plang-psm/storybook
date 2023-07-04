@@ -9,6 +9,8 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const connectDB = require('./config/db');
 
+const index = require('./controllers/index');
+
 // Load config
 dotenv.config({ path: './config/config.env' });
 
@@ -64,9 +66,8 @@ app.engine(
     extname: '.hbs',
   })
 );
-
-// app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', '.hbs');
+app.get('/', index.getHome);
 
 // Sessions
 app.use(
@@ -91,10 +92,7 @@ app.use(function (req, res, next) {
 });
 
 // Static folder
-// app.use(express.static(path.join(__dirname, 'public')));
-app.get('*', (_, res) => {
-  res.sendFile(path.join(__dirname, './views/login.hbs'));
-});
+app.use(express.static('public'));
 
 // Routes
 app.use('/', require('./routes/index'));
