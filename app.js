@@ -89,11 +89,7 @@ app.use(function (req, res, next) {
 });
 
 // Static folder
-app.use(express.static(path.join(__dirname, 'views')));
-
-app.get('*', (_, res) => {
-  res.sendFile(path.join(__dirname, 'views/layouts/main.hbs'));
-});
+app.use(express.static('public'));
 
 // Routes
 app.use('/', require('./routes/index'));
